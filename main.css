@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'Avenis';
+	src: url("webfonts/Avenir/AvenirLTStd-Book.otf") format("opentype");
+}
+
+
+
+
+
+body {
+	margin: 0;
+	min-width: 1200px;
+}
+#id {
+	width: 100%;
+	height: 100%;
+}
+
+a {
+	text-decoration:none !important;
+	text-decoration-color: none !important;
+}
+
+

@@ -1,0 +1,14 @@
+.navHeaderAll {
+	font-size:30px;
+	letter-spacing: 3px;
+	display: flex;
+	align-items: center;
+}
+
+.navHeaderFirstName {
+	font-weight: 300;
+}
+
+.navHeaderLastName {
+	font-weight: 700;
+}

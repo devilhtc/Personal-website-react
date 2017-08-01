@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+.navBarAll {
+	position:absolute;
+	font-family: 'Raleway';
+	width:100%;
+	height:90px;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.10), 0 1px 3px rgba(0,0,0,0.24);
+	display: grid;
+	grid-template-columns:1fr 3fr repeat(5, 1fr);
+	font-size:26px;
+	min-width: 1200px;
+}
+
+.windowShadows {
+	}
+
+.hideOverflow {
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	overflow:hidden;
+}

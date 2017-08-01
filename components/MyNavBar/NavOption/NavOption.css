@@ -1,0 +1,29 @@
+.navOptionAll {
+	display: flex;
+	align-items: center;
+	grid-column: auto/ span 1;
+	font-weight: 300;
+	height: 100%;
+
+}
+
+
+
+.navOptionAll:hover {
+	font-weight: 700;
+}
+
+.navOptionTextLower {
+	margin-left: auto;
+	margin-right: auto;
+	color:black;
+}
+
+
+
+.navOptionTextUpper {
+	margin-left: auto;
+	margin-right: auto;
+	color:white;
+}
+
