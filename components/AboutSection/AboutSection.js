@@ -10,15 +10,13 @@ class AboutSection extends React.Component {
 
 	render() {
 		return (
-			<div className={styles.sectionBody}>
+			<div style={this.props.extraStyle}>
 				About Section
 			</div>
 		);
 	}
 
-	componentDidMount() {
-		this.props.handleChangePath("about");
-	}
+
 
 }
 

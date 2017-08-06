@@ -9,7 +9,6 @@
 
 body {
 	margin: 0;
-	min-width: 1200px;
 }
 #id {
 	width: 100%;
@@ -20,5 +19,4 @@ a {
 	text-decoration:none !important;
 	text-decoration-color: none !important;
 }
-
 

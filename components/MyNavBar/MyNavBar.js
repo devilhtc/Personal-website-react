@@ -22,6 +22,10 @@ class MyNavBar extends React.Component {
       			width:this.props.totalWidth+'px',
       			position:'relative'
       		},
+      		lowerBarStyle: {
+      			width:this.props.totalWidth+'px',
+      			backgroundColor:'white' 
+      		},
       		offsets:{}    		
     	};
 	}
@@ -47,9 +51,7 @@ class MyNavBar extends React.Component {
     	});
 
 
-    	var lowerNavBarStyle={
-    		backgroundColor:'white' 
-    	};
+    	
     	var optionListUpper=options.map(function(item) {
 			return (
 				<NavOption currentOption={currentOption} isUpper={true} linkto={item==="home"?'/':'/'+item} text={item} key={item}/>
@@ -64,7 +66,7 @@ class MyNavBar extends React.Component {
 
 	    return (
 	    	<div>
-		        <div style={lowerNavBarStyle} className={styles.navBarAll}>
+		        <div className={styles.navBarAll} style={this.state.lowerBarStyle}>
 		        	<div> </div>
 		            	<NavHeader isUpper={false} firstName={name[0]} lastName={name[1]} />
 		            	{optionListLower}

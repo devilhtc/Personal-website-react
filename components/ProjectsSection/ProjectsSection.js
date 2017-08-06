@@ -17,9 +17,6 @@ class ProjectsSection extends React.Component {
 		);
 	}
 
-	componentDidMount() {
-		this.props.handleChangePath("projects");
-	}
 
 }
 

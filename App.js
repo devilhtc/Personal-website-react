@@ -5,6 +5,7 @@ import MyNavBar from './components/MyNavBar/MyNavBar'
 import HomeSection from './components/HomeSection/HomeSection'
 import AboutSection from './components/AboutSection/AboutSection';
 import ProjectsSection from './components/ProjectsSection/ProjectsSection';
+import ContactSection from './components/ContactSection/ContactSection';
 import createReactClass from 'create-react-class';
 
 class App extends React.Component {
@@ -27,8 +28,9 @@ class App extends React.Component {
       
       const Home = createReactClass({
         render() {
+         self.changePath("home");
           return (
-            <HomeSection extraStyle={contentMargin} handleChangePath={self.changePath} />
+            <HomeSection extraStyle={contentMargin} />
           );
         }
       });
@@ -36,16 +38,27 @@ class App extends React.Component {
 
       const About = createReactClass({
         render() {
+         self.changePath("about");
           return (
-            <AboutSection extraStyle={contentMargin} handleChangePath={self.changePath} />
+            <AboutSection extraStyle={contentMargin}/>
           );
         }
       });
 
       const Projects = createReactClass({
         render() {
+            self.changePath("projects");
           return (
-            <ProjectsSection extraStyle={contentMargin} handleChangePath={self.changePath} />
+            <ProjectsSection extraStyle={contentMargin}/>
+          );
+        }
+      });
+
+      const Contact = createReactClass({
+        render() {
+          self.changePath("contact");
+          return (
+            <ContactSection extraStyle={contentMargin}/>
           );
         }
       });
@@ -60,6 +73,7 @@ class App extends React.Component {
                      <Route exact path='/' component={Home}/>
                      <Route exact path='/about' component={About}/>
                      <Route exact path='/projects' component={Projects}/>
+                     <Route exact path='/contact' component={Contact}/>
                   </Switch>
                </div>
             </HashRouter>
@@ -82,7 +96,7 @@ class App extends React.Component {
       console.log(this.refs.allRef.offsetWidth);
       console.log(window.innerWidth);
       this.setState({
-         totalWidth:window.innerWidth+""
+         totalWidth:window.innerWidth
       });
       window.addEventListener("resize", (function() {
     // Get screen size (inner/outerWidth, inner/outerHeight)

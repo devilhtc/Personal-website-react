@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './HomeSection.css';
+import styles from './ContactSection.css';
 
 class ContactSection extends React.Component {
 
@@ -9,9 +9,8 @@ class ContactSection extends React.Component {
     }
 
 	render() {
-		console.log("wtf");
 		return (
-			<div>
+			<div style={this.props.extraStyle}>
 				Contact Section
 			</div>
 		);
@@ -19,4 +18,4 @@ class ContactSection extends React.Component {
 
 }
 
-export default HomeSection;
+export default ContactSection;

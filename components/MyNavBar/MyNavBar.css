@@ -9,11 +9,11 @@
 	display: grid;
 	grid-template-columns:1fr 3fr repeat(5, 1fr);
 	font-size:26px;
-	min-width: 1200px;
 }
 
 .windowShadows {
-	}
+
+}
 
 .hideOverflow {
 	position:absolute;

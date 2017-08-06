@@ -17,9 +17,7 @@ class HomeSection extends React.Component {
 		);
 	}
 
-	componentDidMount() {
-		this.props.handleChangePath("home");
-	}
+
 
 }
 
