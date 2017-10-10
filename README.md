@@ -1,6 +1,6 @@
 # personal-website-react
 
-### [Personal Website](www.google.com) built with ReactJS.
+### [Personal Website](http://www.google.com) built with ReactJS.
 
 To run:
 
