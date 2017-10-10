@@ -8,13 +8,15 @@ class MyNavBar extends React.Component {
 	constructor(props) {
 		super(props);
 		this.recordOffsets=this.recordOffsets.bind(this);
+		var baseHeight=60;
     	this.state = {
       		options: ["home","about","projects","contact"],
       		name: ["David","Haller"],
       		currentOption: this.props.currentOption,
       		upperWindowStyle:{
       			position:'absolute',
-      			height:'100px',
+      			top:'0px',
+      			height:(baseHeight+0)+'px',
       			boxShadow: '0 3px 5px rgba(0,0,0,0.10), 0 1px 3px rgba(0,0,0,0.24)'
 
       		},
@@ -23,24 +25,21 @@ class MyNavBar extends React.Component {
       			position:'relative'
       		},
       		lowerBarStyle: {
-      			width:this.props.totalWidth+'px',
-      			backgroundColor:'white' 
+      			width:this.props.totalWidth+'px'
       		},
       		offsets:{}    		
     	};
 	}
 
 	recordOffsets(item,itemOffsets) {
-		console.log("reporting offsets from "+item);
 		this.state.offsets[item]=itemOffsets;
 	}
 
     render() {
-    	console.log("navBar rendering");
     	// constants
     	// might need rest api to get
     	// well, not including the section names
-    	console.log(this.props.totalWidth);
+
 
     	var options=this.state.options;
     	var name=this.state.name;

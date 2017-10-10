@@ -12,7 +12,7 @@ class NavOption extends React.Component {
 		//console.log(Link);
 		//console.log(this.props);
 
-		var colorScheme = this.props.isUpper?{backgroundColor:'black',color:'white'}:{backgroundColor:'white',color:'black'};
+		var colorScheme = this.props.isUpper?{backgroundColor:'black',color:'white'}:{color:'black'};
 		var extraPadding = this.props.isUpper?{paddingBottom:'10px',boxShadow: '0 0px 3px rgba(0,0,0,0.15), 0 2px 5px rgba(0,0,0,0.28)'}:{};
 		var totalStyle={};
 		Object.assign(totalStyle,colorScheme,extraPadding);
@@ -27,7 +27,7 @@ class NavOption extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log("mounted");
+		
 		console.log(this.refs.optRef.offsetLeft);
 		if (!this.props.isUpper) {
 			this.props.reportOffsets(this.props.text,[this.refs.optRef.offsetLeft,this.refs.optRef.offsetWidth]);

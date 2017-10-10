@@ -2,12 +2,13 @@
 	overflow: hidden;
     position:relative;
     margin-top:5px;
+    margin-right:10px;
 }
 
 .tileStandard {
 	width:100%;
 	height: 100%;
-	font-family: Avenis;
+	font-family: 'Raleway';
 }
 
 .tilePlaceholder {
@@ -17,7 +18,6 @@
 	opacity: 0;
 	color:green;
 }
-
 .upperTileAnimationIn {
 
 	animation-duration:0.3s;
@@ -52,7 +52,7 @@
 
 .spanStyle {
     width:100%;
-    white-space:nowrap;
+    white-space:pre;
 }
 
 .upperTileMoreStyle {

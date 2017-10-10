@@ -1,8 +1,9 @@
 .navHeaderAll {
-	font-size:30px;
+	font-size:35px;
 	letter-spacing: 3px;
 	display: flex;
 	align-items: center;
+	padding-left: 30px;
 }
 
 .navHeaderFirstName {

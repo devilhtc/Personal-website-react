@@ -8,13 +8,15 @@ import ProjectsSection from './components/ProjectsSection/ProjectsSection';
 import ContactSection from './components/ContactSection/ContactSection';
 import createReactClass from 'create-react-class';
 
+var globalPath="home";
 class App extends React.Component {
    constructor() {
       super();
       this.state={
          currentOption:"home",
-         totalWidth:window.innerWidth
-      }
+         totalWidth:window.innerWidth,
+         windowHeight:window.innerHeight
+      };
       this.changePath=this.changePath.bind(this);
 
    }
@@ -24,7 +26,7 @@ class App extends React.Component {
       var self=this;
       console.log("rendering app");
 
-      const contentMargin = {marginTop:'100px',position:'absolute'};
+      const contentMargin = {gridColumn:'2/3',fontFamily: 'Raleway', width:'100%', boxShadow:'0 0 15px rgba(0,0,0,0.4)', height:'100%'};
       
       const Home = createReactClass({
         render() {
@@ -56,11 +58,12 @@ class App extends React.Component {
 
       const Contact = createReactClass({
         render() {
-          self.changePath("contact");
+         self.changePath("contact");
           return (
             <ContactSection extraStyle={contentMargin}/>
           );
         }
+
       });
 
 
@@ -68,13 +71,15 @@ class App extends React.Component {
          <div ref="allRef">
             <HashRouter>
                <div>
-                  <MyNavBar totalWidth={this.state.totalWidth} currentOption={this.state.currentOption} />
+                  <div className="sectionContainer">
                   <Switch>
                      <Route exact path='/' component={Home}/>
                      <Route exact path='/about' component={About}/>
                      <Route exact path='/projects' component={Projects}/>
                      <Route exact path='/contact' component={Contact}/>
                   </Switch>
+                  </div>
+                  <MyNavBar totalWidth={this.state.totalWidth} currentOption={this.state.currentOption} />
                </div>
             </HashRouter>
          </div>
@@ -82,6 +87,7 @@ class App extends React.Component {
    }
 
    changePath(option) {
+
       if (option!==this.state.currentOption) {
          this.setState(
             {currentOption:option}
@@ -89,6 +95,15 @@ class App extends React.Component {
          console.log(this.state);
       }
       
+      
+   }
+   componentWillUpdate() {
+      if (globalPath!==this.state.currentOption) {
+         this.setState(
+            {currentOption:globalPath}
+         );
+         console.log(this.state);
+      }
    }
 
    componentDidMount() {
@@ -102,7 +117,7 @@ class App extends React.Component {
     // Get screen size (inner/outerWidth, inner/outerHeight)
          console.log('resizing');
          console.log(window.innerWidth);
-         this.setState({totalWidth:window.innerWidth});        
+         this.setState({totalWidth:window.innerWidth,windowHeight:window.innerHeight});        
 
       }).bind(this), false);
    }

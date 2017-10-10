@@ -1,0 +1,27 @@
+.projectInstance {
+	box-shadow: 0 0 2px rgba(0,0,0,0.2);
+	padding:22px;
+	margin: 20px 0;
+	transition: box-shadow 0.2s ease-in-out;
+}
+
+.projectInstance:hover {
+	box-shadow: 0 1px 8px rgba(0,0,0,0.3);
+}
+
+.projectTitle {
+	font-size:30px;
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+
+.projectDescription {
+	margin: 5px 0;
+}
+
+.projectLinks {
+	font-family: 'Avenis';
+	display:flex;
+	flex-direction: row;
+	margin-top: 10px;
+}
