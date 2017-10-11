@@ -2,7 +2,7 @@
   "name": "personal-website-react",
   "version": "1.0.0",
   "description": "trial",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "start": "webpack-dev-server --hot"
   },

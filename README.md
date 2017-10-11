@@ -1,6 +1,9 @@
 # personal-website-react
 
-### [Personal Website](http://www.google.com) built with ReactJS.
+### This project is under major rewrite
+### And is migrated to [new repo](https://github.com/devilhtc/personal-website-do)
+
+### [Personal Website](#) built with ReactJS.
 
 To run:
 
